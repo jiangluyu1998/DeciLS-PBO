@@ -15,8 +15,10 @@ make
 1.单元传播作为新的初始化-两种新定义的单元子句参与up过程
 
 代码与论文的对应情况：（位于deci.h的assign函数中）
-1-of-all generalized unit clause:  即if (clause_sum_lit_weight[c]-clause_max_lit_weight[c] < clause_cardinality[c])
-all-of-all generalized unit clause：即 if (clause_sum_lit_weight[c] <= clause_cardinality[c])
+1-of-all generalized unit clause:  即if (clause_sum_lit_weight[c]-clause_max_lit_weight[c] < clause_cardinality[c])的情况
+
+all-of-all generalized unit clause：即 if (clause_sum_lit_weight[c] <= clause_cardinality[c])的情况
+
 
 2.加入一个对子句的启发式 新的指标care值
 
