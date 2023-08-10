@@ -31,4 +31,4 @@ all-of-all generalized unit clause：即 if (clause_sum_lit_weight[c] <= clause_
 
 引用本文：
 
-Luyu JIANG, Dantong OUYANG, Qi ZHANG, Liming ZHANG. DeciLS-PBO: an Effective Local Search Method for Pseudo-Boolean Optimization. Front. Comput. Sci., https://doi.org/10.1007/s11704-023-3018-8
+Luyu JIANG, Dantong OUYANG, Qi ZHANG, Liming ZHANG. DeciLS-PBO: an effective local search method for pseudo-Boolean optimization. Front. Comput. Sci., 2024, 18(2): 182326 https://doi.org/10.1007/s11704-023-3018-8
