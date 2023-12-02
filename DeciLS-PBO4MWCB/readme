@@ -1,0 +1,34 @@
+The input file must be read from the file given as a parameter to your solver. For example:
+
+./mysolver <input_file_name> <cutoff_time>
+
+Input file format:
+
+A line starting with a ’c’ is a comment and can be ignored.
+
+The parameters line is "p wcnf nbvar nbconst top". We associate a weight with each constraint, which is the first integer in the constraint. Weights must be greater than or equal to 1, and smaller than 2^63. The sum of the weights must be less than 2^64-1. Hard constraints have weight top and soft constraints have a weight smaller than top. top will always be greater than the sum of the soft clause weights. 
+
+The second num of each constraint is the degree of the constraint followed by the coefficient of literal and literal itself. Each constraint must end with '0'. Constraint: <weight> <degree> <coeff> <lit> ... <coeff> <lit> 0
+
+The input files have a “.wecnf” extension.
+
+
+Example: test.wecnf
+
+c
+c comment line
+c
+p wcnf 4 5 16
+16 2 1 1 2 -2 3 4 0   // 1x1 + 2(-x2) + 3x4 >= 2
+16 3 3 -1 2 -2 1 3 0 // 3(-x1) + 2(-x2) + 1x3 >= 3
+8 1 1 1 0
+4 1 1 2 0
+3 1 1 3 0
+1 1 1 4 0
+
+The above instance is equal to:
+min z: 8(-x1) + 4(-x2) + 3(-x3) + (-x1)
+1x1 + 2(-x2) + 3x4 >= 2
+3(-x1) + 2(-x2) + 1x3 >= 3
+
+Note that: (-xi) = 1 - xi, xi \in {0,1}
